@@ -2,6 +2,10 @@ let amigos = [];
 
 function adicionar() {
   let amigo = document.getElementById("nome-amigo");
+  if (amigo.value == "") {
+    alert("Por favor informar um nome valido");
+    return;
+  }
   let listaAmigos = document.getElementById("lista-amigos");
   amigos.push(amigo.value);
   if (listaAmigos.textContent == "") {
@@ -38,9 +42,8 @@ function embaralha(lista) {
   }
 }
 
-function reiniciar(){
-        amigos = []; // Esvazia a lista
-        document.getElementById("lista-amigos").innerHTML = "";
-        document.getElementById("lista-sorteio").innerHTML = "";
-    }
-    
+function reiniciar() {
+  amigos = []; // Esvazia a lista
+  document.getElementById("lista-amigos").innerHTML = "";
+  document.getElementById("lista-sorteio").innerHTML = "";
+}
