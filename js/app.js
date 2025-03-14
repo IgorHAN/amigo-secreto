@@ -6,6 +6,11 @@ function adicionar() {
     alert("Por favor informar um nome valido");
     return;
   }
+  if (amigo.value == amigos.length){
+    alert("Esse nome já foi adiconado, por favor verifique");
+    return;
+  }
+
   let listaAmigos = document.getElementById("lista-amigos");
   amigos.push(amigo.value);
   if (listaAmigos.textContent == "") {
@@ -18,6 +23,11 @@ function adicionar() {
 }
 
 function sortear() {
+  if (amigos.length < 4) {
+    alert("Por favor inserir mais de quatro participantes");
+    return;
+  }
+
   embaralha(amigos);
   let sorteio = document.getElementById("lista-sorteio");
   for (let i = 0; i < amigos.length; i++) {
