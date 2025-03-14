@@ -6,7 +6,7 @@ function adicionar() {
     alert("Por favor informar um nome valido");
     return;
   }
-  if (amigo.value == amigos.length){
+  if (amigos.includes(amigo.value)){
     alert("Esse nome já foi adiconado, por favor verifique");
     return;
   }
